@@ -7,7 +7,7 @@ tabela = pd.read_csv('dados.csv', sep = ',',index_col = 0)
 def informacoes_pag():
     #aqui serão armazenados os links encontrados a fim de entrar em cada página
     #vamos fazer um for em cada link para pegar as informações
-    for y in range(5,50):
+    for y in range(1,50):
         driver.get('https://www.truckpad.com.br/fretes?page='+ str(y))
         if y == 10 or 20 or 30 or 40 or 50 or 60 or 70 or 80 or 90:
             tabela.to_csv('dados.csv', sep=',')
